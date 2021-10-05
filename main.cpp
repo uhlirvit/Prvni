@@ -1,35 +1,38 @@
-#include <iostream>         //knihovna pro v√Ωpis na obrazovku
+#include <iostream>
 
-using namespace std;        //jakoukoliv fci, co napisu za tento radek, bude hledat ve standartni knihovne => nen√≠ nutno pak p√∏edepisovat p√∏ed ka≈ædou fci
+using namespace std;
 
-int main()                  //integer je celociselna promenna, na konci je tedy nutno vratit cele cislo, kdyz vse probehne dobre, tak int vrati nulu
-{\
-    std::cout <<"Zdravim, jak se vede?" << std::endl;     //cokoliv za cout vypisime, vykresli obrazovku cokoliv, co tam napiseme
-                                                          //std deklaruje samotnou funkci, abychom ji mohli pou≈æ√≠t
+int main()
+{
+    //bool vstup2;                                                             // deklarace promenne
+    //vstup2 = false;                                                          // ulozeni hodnoty do promenne
 
-    int celeCislo = 14000000;
-    int a = 3;
+    int vstup = 0;                                                             // inicializace promenne - doporucovany zpusob
 
-    double realneCislo = double(a) / celeCislo;           //=realne cislo, pouziva se nejvic pro numericke vypocty, je 2x vice presnejsi nez "float"
+    cout << "Stiskni 0 nebo 1: ";
+    cin >> vstup;
 
-    char poleZnaku[] = {'a', 'b', 'c'};                                      // datova promenna pro znak
-    string retezec = "Toto je retezec.";                  // promenna pro slovni spojeni
+    if (vstup == 0)
+    {
+        cout << "Nula!" << endl;
+    }
+    else if(vstup == 1)
+    {
+        cout << "Jedna!" << endl;
+    }
+    else
+    {
+        cout << "Mel si zmacknout 0 nebo 1! Tohle je: " << vstup << endl;
+    }
 
-    int mojePole[]={1, 5, 8};                             //pole, nebo-li vektor, dale je ekvivalent zapsani slozek vektoru, takto neni nutno deklarovat poƒçet slo≈æek
-        //mojePole[0]=1;
-        //mojePole[1]=5;
-        //mojePole[2]=8;
+    // Prepinac
+    switch (vstup)
+    {
+        case 0: cout << "Nula - ze switche"; break;    // Vse, co je mezi 'case' a 'break;' se provede v p¯ÌpadÏ, ûe vstup = 0
+        case 1: cout << "Jedna - ze switche"; break;   // Vse, co je mezi 'case' a 'break;' se provede v p¯ÌpadÏ, ûe vstup = 1
+        default: cout << "Mel si zmacknout 0 nebo 1! Tohle je: " << vstup << " - ze switche.";
+    }
 
-    bool start = 0;                                       //Booleovska promenna
-    start = true;                                         // = 1
-    start = false;                                        // = 0
-    cout << "Velke cislo = " << celeCislo << endl;              //textovy √∏et√¨zec je v≈ædy nutno odd√¨lovat <<
-                                                          // davat si pozor na to jaky datovy tip mame, je potreba treba mit tecku a desetinne cislo apod.
-    //cout << "Znak = " << znak << endl;
-    cout << "Retezec = " << retezec << endl;
-    cout << "Druha slozka pole je " << mojePole[1] << endl; //vypise 2. prvek pole, C cisluje od 0 !!!
-    cout << "Davej bacha, cislovani jde od 0!"<< endl;
-    cout << "Treti slozka z pole znaku " << poleZnaku[2] << endl;
 
-    return 0;                                             //endl = end of line
+    return 0;
 }
