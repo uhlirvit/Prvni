@@ -1,10 +1,10 @@
-#include <iostream>         //knihovna pro vıpis na obrazovku
+#include <iostream>         //knihovna pro vÃ½pis na obrazovku
 
-using namespace std;        //jakoukoliv fci, co napisu za tento radek, bude hledat ve standartni knihovne => není nutno pak pøedepisovat pøed kadou fci
+using namespace std;        //jakoukoliv fci, co napisu za tento radek, bude hledat ve standartni knihovne => nenÃ­ nutno pak pÅ™edepisovat pÅ™ed kaÅ¾dou fci
 
 int main()                  //integer je celociselna promenna, na konci je tedy nutno vratit cele cislo, kdyz vse probehne dobre, tak int vrati nulu
 {\
-    std::cout <<"Zdravim, jak se vede?" << std::endl;     //cokoliv za cout vypisime, vykresli obrazovku cokoliv, co tam napiseme
-                                            //std deklaruje samotnou funkci, abychom ji mohli pouít
+    std::cout <<"ZdravÃ­m, jak se vede?" << std::endl;     //cokoliv za cout vypisime, vykresli obrazovku cokoliv, co tam napiseme
+                                            //std deklaruje samotnou funkci, abychom ji mohli pouÅ¾Ã­t
     return 0;                               //endl = end of line
 }
